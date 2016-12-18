@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-TencentWeibo-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f391083f803101456937234584e5523d2ccfb909">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-TencentWeibo-2.7.10_04061b973112acbe144bb1ad444200ddcee43abd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_58d8db465136b48b20399438bb4e0c6359c00617.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\MobCommons-2016.1201.1839.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d2416fb4e3fe16c82785fc6cd4f8b768b25c6202">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\MobCommons-2016.1201.1839_096ff9cb07016a46daa179171069685052c972ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-QQ-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5d3ffc9c4c2743fcc83b3333f77fc252fb146889">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-QQ-2.7.10_2bb81863cbe45092ddf546862468bb97c470e46e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_f186391b7d7ebabda685aff0b0baebf2d8c90f69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_bbd1bcacddf03d96613f19981ee1ef0c6397e6d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-Core-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a7e5f9da3635eb8d89b8a9a22cd68cd64cca9104">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-Core-2.7.10_3f12bcc4faf5542e0436cad5b31615c4e4d76b57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-QZone-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="158eb0f8525584008bfc92c2c6a4841174133a0a">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-QZone-2.7.10_a6575033c4f9ed3adaba4e666f74db0d4928e1ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\SMSSDK-2.1.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fc6d206c94c04bb831ae00c9f6a2833e6aab8a73">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-SMSSDK-2.1.3_e8e6fcf61d7064a69cb45e36d17b6147dde65f5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_1f04e1cc6048fa1ecb3a2cecb653dde6b93f08d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d16849834271006ee2f0ccd6e299ea9f46db2b3e">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_908fc6a3f77d2062203126e0fbcad4d6fea718a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-Wechat-Moments-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a8357a3810c2e5bbb6274042a1508bac87759c5f">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.7.10_4340552d2ad7923d7cf3a28cef6b0494be0e0941.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\SMSSDKGUI-2.1.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="117dde8406e2a9aed9d525a23ea465952d601072">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-SMSSDKGUI-2.1.3_9b9183b51edd311f9bb980813498a4876420538c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\MobTools-2016.1201.1839.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="28b130b739199908b8b9f82d6cc77043b5040d25">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\MobTools-2016.1201.1839_9fe9ccc04160e6eaed148ae112ce6c66be1d8266.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-SinaWeibo-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="52574245a489f42699687ba9038c8c803a8e8bcf">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.7.10_a400ac1fe47f4f0ef04927a48eeecb41e1c00b61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_c9072975bb67dafe74950e928a68604716d084af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-Wechat-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b9e12f2d8a6f01dce27c65ce3b93bccd46e7ffd4">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.7.10_d2a7049b34c91e1d0997b6b7d40d2123f601f035.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_8811ce3768a2fc7a66206485e3d4b45fe4f17439.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1_1af0d708c0a93c618d46b423ab360cd095ad58c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\libs\ShareSDK-Wechat-Core-2.7.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a720ef31ac89904b603fb2a27c01bb21a951fcad">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Core-2.7.10_f05dad3f7cc909f22b0740e5cfcd43f95d95156a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_66ef75ef706e11f948ebf300a9932f214718a7af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_d8f2b0c1d2202bb060d53925d70d9a0ad9881e0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="264c00fe1034fff20aeabb91aecf88cb01b851bd">
+        <dex dex="C:\Users\Hao\StudioProjects\HaoTestDemo\app\build\intermediates\pre-dexed\debug\instant-run_d842865018a46b19696632c4561b00a1c31b096e.jar" />
+    </item>
+
+</items>
