@@ -1,6 +1,9 @@
 package com.example.hao.haotestdemo.acticity;
 
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -30,6 +33,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> impl
     @Bind(R.id.btn_get_code)
     TimeButton btn_get_code;
     private SmsObserver smsObserver;
+    private static final int MY_PERMISSIONS_REQUEST_READ_SMS = 1;
 
     @Override
     public int getLayoutId() {
@@ -43,11 +47,17 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> impl
 
     @Override
     public void initViews() {
-        SMSSDK.initSDK(this, "19a77fb658d00", "0695b56d4874dc7a8961cca09ba945e0");
-        smsObserver = new SmsObserver(this, mPresenter.mHandler);
+        SMSSDK.initSDK(this, "1a24ca18591cc", "d81d68e37508d0ade92fa7556aad0608");
+
+        initSMSObserver();
+
+        SMSSDK.registerEventHandler(mPresenter.eh); //注册短信回调
+    }
+
+    private void initSMSObserver() {
+        smsObserver = new SmsObserver(LoginActivity.this, mPresenter.mHandler);
         Uri uri = Uri.parse("content://sms");
         getContentResolver().registerContentObserver(uri, true, smsObserver);
-        SMSSDK.registerEventHandler(mPresenter.eh); //注册短信回调
     }
 
     @Override
@@ -68,6 +78,11 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> impl
     @Override
     public void setCode(String code) {
         edt_code.setText(code);
+    }
+
+    @Override
+    public Activity getActivity() {
+        return this;
     }
 
     @Override
@@ -103,5 +118,15 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> impl
     @OnClick(R.id.wechat_login)
     public void wechatLogin() {
         mPresenter.wechatLogin();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == MY_PERMISSIONS_REQUEST_READ_SMS){
+            if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+            }
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

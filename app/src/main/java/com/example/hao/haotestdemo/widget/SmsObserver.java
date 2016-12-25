@@ -1,13 +1,18 @@
 package com.example.hao.haotestdemo.widget;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 
+import android.content.pm.PackageManager;
 import android.database.ContentObservable;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.example.hao.haotestdemo.acticity.MainActivity;
@@ -22,10 +27,12 @@ import java.util.regex.Pattern;
 
 public class SmsObserver extends ContentObserver {
 
-    private Context context;
+    private Activity context;
     private Handler handler;
+    private static final int READSMS = -1;
+    private static final int MY_PERMISSIONS_REQUEST_READ_SMS = 1;
 
-    public SmsObserver(Context context, Handler handler) {
+    public SmsObserver(Activity context, Handler handler) {
         super(handler);
         this.context = context;
         this.handler = handler;
@@ -34,22 +41,10 @@ public class SmsObserver extends ContentObserver {
     @Override
     public void onChange(boolean selfChange) {
         super.onChange(selfChange);
-        Log.e("Debug", "onChange");
-        Uri uri = Uri.parse("content://sms/inbox");
-        Cursor cursor = context.getContentResolver().query(uri, null, null, null, "date desc");
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                int address = cursor.getInt(cursor.getColumnIndex("address"));
-                String body = cursor.getString(cursor.getColumnIndex("body"));
-                Log.e("Debug", address + "  " + body);
-                Pattern pattern = Pattern.compile("\\d{4}");
-                Matcher matcher = pattern.matcher(body);
-                if (matcher.find(0)) {
-                    String code = matcher.group(0);
-                    handler.obtainMessage(LoginPresenter.SMSCODE, code).sendToTarget();
-                }
-            }
-            cursor.close();
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(context, new String[]{Manifest.permission.READ_SMS}, MY_PERMISSIONS_REQUEST_READ_SMS);
+        } else {
+            handler.sendEmptyMessage(READSMS);
 
         }
     }

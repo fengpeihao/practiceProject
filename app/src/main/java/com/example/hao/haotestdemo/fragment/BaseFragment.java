@@ -19,9 +19,9 @@ import butterknife.ButterKnife;
 
 public abstract class BaseFragment<F extends BasePresenter,E extends BaseModel> extends Fragment {
 
-    private View rootView;
-    private F mPresenter;
-    private E mModel;
+    public View rootView;
+    public F mPresenter;
+    public E mModel;
 
     @Nullable
     @Override

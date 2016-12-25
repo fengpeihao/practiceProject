@@ -2,6 +2,7 @@ package com.example.hao.haotestdemo.acticity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.hao.haotestdemo.bean.BaseModel;
@@ -10,7 +11,7 @@ import com.example.hao.haotestdemo.utils.TUtils;
 
 import butterknife.ButterKnife;
 
-public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel> extends AppCompatActivity{
+public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel> extends FragmentActivity{
     public Context mContext;
     public T mPresenter;
     public E mModel;

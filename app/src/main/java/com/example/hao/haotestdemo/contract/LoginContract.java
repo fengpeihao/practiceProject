@@ -1,5 +1,7 @@
 package com.example.hao.haotestdemo.contract;
 
+import android.app.Activity;
+
 import com.example.hao.haotestdemo.acticity.BaseView;
 import com.example.hao.haotestdemo.bean.BaseModel;
 import com.example.hao.haotestdemo.presenter.BasePresenter;
@@ -15,6 +17,8 @@ public interface LoginContract {
         String code();
 
         void setCode(String code);
+
+        Activity getActivity();
 
         void clearPhone();
 

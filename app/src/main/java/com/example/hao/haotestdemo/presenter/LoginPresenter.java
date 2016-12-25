@@ -1,5 +1,7 @@
 package com.example.hao.haotestdemo.presenter;
 
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
@@ -7,11 +9,15 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.hao.haotestdemo.acticity.MainActivity;
+import com.example.hao.haotestdemo.app.App;
 import com.example.hao.haotestdemo.contract.LoginContract;
+import com.example.hao.haotestdemo.utils.IMConnect;
 import com.example.hao.haotestdemo.utils.PhoneUtils;
 import com.mob.tools.utils.UIHandler;
 
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
@@ -28,7 +34,7 @@ import cn.smssdk.SMSSDK;
 public class LoginPresenter extends LoginContract.Presenter {
     private Platform platform;
     public EventHandler eh;
-    public static final int SMSCODE = -1;
+    public static final int READSMS = -1;
     public Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -46,19 +52,50 @@ public class LoginPresenter extends LoginContract.Presenter {
                     break;
                 case 4:
                     Toast.makeText(mContext, "验证提交成功", Toast.LENGTH_SHORT).show();
+                    connectIm();
                     break;
                 case 5:
                     Toast.makeText(mContext, "验证码已发送", Toast.LENGTH_SHORT).show();
                     break;
                 case 6:
-                    Toast.makeText(mContext, "输入错误验证码", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "输入的错误验证码", Toast.LENGTH_SHORT).show();
+                    connectIm();
                     break;
-                case SMSCODE:
-                    mView.setCode((String) msg.obj);
+                case READSMS:
+                   readSMS();
                     break;
             }
         }
     };
+
+    private void readSMS() {
+        Uri uri = Uri.parse("content://sms/inbox");
+        Cursor cursor = mContext.getContentResolver().query(uri, null, null, null, "date desc");
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                int address = cursor.getInt(cursor.getColumnIndex("address"));
+                String body = cursor.getString(cursor.getColumnIndex("body"));
+                Log.e("Debug", address + "  " + body);
+                Pattern pattern = Pattern.compile("\\d{4}");
+                Matcher matcher = pattern.matcher(body);
+                if (matcher.find(0)) {
+                    String code = matcher.group(0);
+                    mView.setCode(code);
+                }
+            }
+            cursor.close();
+        }
+    }
+
+    private void connectIm() {
+        String token = "";
+        if("13052313520".equals(mView.phone())){
+            token = "qgjtnqQnNM4R2quWRacs5NB16+P+2ksUNPSzw2s6FYkkFRn1oeknE2eSeCw8cZ1PEhg6Z2sZRW4KDoaB5yH4O5krq3hRmN2q";
+        }else if("18639721736".equals(mView.phone())){
+            token = "YtWqgeLeAA1UhjiLlSju78kmFg9eo+94ySyuDN50kLZyqcTtPBFT6QR7jxCEx+PvGFeTu46f0XrbyqtVWWZlFS00l7tLiKSV";
+        }
+        IMConnect.connect(mView.getActivity(),token);
+    }
 
     {
         eh = new EventHandler() {
@@ -75,11 +112,11 @@ public class LoginPresenter extends LoginContract.Presenter {
                         mHandler.sendEmptyMessage(5);
                     } else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {
                         //返回支持发送验证码的国家列表
-                    } else {
-                        mHandler.sendEmptyMessage(6);
                     }
+
                 } else {
                     ((Throwable) data).printStackTrace();
+                    mHandler.sendEmptyMessage(6);
                 }
             }
         };
@@ -102,6 +139,7 @@ public class LoginPresenter extends LoginContract.Presenter {
 
     @Override
     public void phoneLogin() {
+        App.userId = mView.phone();
         SMSSDK.submitVerificationCode("86", mView.phone(), mView.code());
     }
 
@@ -172,7 +210,7 @@ public class LoginPresenter extends LoginContract.Presenter {
                     }
                 });
 //                login(plat.getName(), userId, null);
-                Toast.makeText(mContext, "login", Toast.LENGTH_SHORT).show();
+                connectIm();
                 return;
             }
         }
