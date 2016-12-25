@@ -7,4 +7,7 @@
     <string name="text_get_code">点击获取验证码</string>
     <string name="text_onekey_login">您也可以用第三方一键登录呦</string>
     <string name="text_code">验证码</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
